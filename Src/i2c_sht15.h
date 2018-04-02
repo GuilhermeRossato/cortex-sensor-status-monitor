@@ -3,9 +3,14 @@
 	#define R(l,i)		((GPIO##l->IDR & (1<<i))>0)
 #endif
 
+void delayMicroseconds(int n) {
+	long x = 10*n;
+	while (x-->0);
+}
+
 #define SCL 2
 #define SDA 3
-#define DELAY HAL_Delay(1)
+#define DELAY delayMicroseconds(500)
 
 enum {
 	RESETED,
