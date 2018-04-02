@@ -40,13 +40,13 @@ void displayState() {
 			//sprintf((char*)buffer,"       VOLTAR "); BSP_LCD_DisplayStringAtLine(11,(uint8_t*)buffer);
 			BSP_LCD_DrawRect(111, 268, 115, 40);
 		}
-		
+
 		sprintf((char*)buffer,"Time=%4.2f s",HAL_GetTick()/1000.0);
 		BSP_LCD_DisplayStringAtLine(2,(uint8_t*)buffer);
-		
+
 		sprintf((char*)buffer,"X=%03d,Y=%03d", last_x, last_y);
 		BSP_LCD_DisplayStringAtLine(4,(uint8_t*)buffer);
-		
+
 		if (errNumber != 0) {
 			sprintf((char*)buffer,"errNumber=%03d ", errNumber);
 			BSP_LCD_DisplayStringAtLine(6,(uint8_t*)buffer);
@@ -63,7 +63,7 @@ void displayState() {
 			humid.updated = 0;
 			speed.updated = 0;
 		}
-	
+
 		substate++;
 		if (redraw_info == 0) {
 			redraw_info = 1;
@@ -92,8 +92,17 @@ void displayState() {
 			speed.updated = 0;
 		}
 	} else if (state == MENU) {
-			BSP_LCD_DrawRect(10, 160, 220, 30);
-			BSP_LCD_DrawRect(10, 200, 220, 30);
+		BSP_LCD_DrawRect(10, 160, 220, 30);
+		BSP_LCD_DrawRect(10, 200, 220, 30);
+	} else if (state == CONFIG_FAN_SPEED) {
+		if (redraw_info == 0) {
+			BSP_LCD_Clear(LCD_COLOR_WHITE);
+			LCP_LCD_DisplayStringAtLine(1,(uint8_t*)"  CONFIG FAN  ");
+			init_slider(0, 10, 10, 2);
+			set_slider_values(0, 20, 180, 0);
+			redraw_info = 1;
+		}
+		draw_slider(0);
 	} else if (state == ERROR_MODE) {
 		if (redraw_info == 0) {
 			BSP_LCD_Clear(LCD_COLOR_WHITE);
@@ -106,7 +115,7 @@ void displayState() {
 }
 
 void checkAlarmState() {
-	
+
 }
 
 typedef enum {
@@ -126,6 +135,17 @@ void processEvent(EVENT_TYPE type, int x, int y) {
 			state = DEBUG;
 			redraw_info = 0;
 		}
+	}
+
+	if (state == CONFIG_FAN_SPEED) {
+		if (type == TOUCH_START) {
+			slider_handle_mouse_down(x, y);
+		} else if (type == TOUCH_MOVE) {
+			slider_handle_mouse_move(x, y);
+		} else if (type == TOUCH_END) {
+			slider_handle_mouse_up(x, y);
+		}
+		return;
 	}
 	last_x = x;
 	last_y = y;
@@ -250,7 +270,7 @@ void updateReadings() {
 			start_i2c_SHT();
 			break;
 	}
-	if (x >= 0 && x <= 20) { 
+	if (x >= 0 && x <= 20) {
 		x = x>20?0:x+1;
 	}
 }

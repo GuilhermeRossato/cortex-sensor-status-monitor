@@ -5,7 +5,7 @@
   ******************************************************************************
   ** This notice applies to any and all portions of this file
   * that are not between comment pairs USER CODE BEGIN and
-  * USER CODE END. Other portions of this file, whether 
+  * USER CODE END. Other portions of this file, whether
   * inserted by the user or by software development tools
   * are owned by their respective copyright owners.
   *
@@ -54,18 +54,18 @@
  *
  * Parameters
  *  letter - A single letter that identifies the GPIO bus
- *  pin index - A number between 0 and 8 for which pin 
+ *  pin index - A number between 0 and 8 for which pin
  *  value - a binary number that identifies low or high to drive the pin
  *
  * Usage:
  * P(G, 13, 1); // Sets pin PG13 to HIGH
  *
 */
-	#define P(l,i,v)	GPIO##l->BSRR = 1<<(i+((!v)*16))
+    #define P(l,i,v)    GPIO##l->BSRR = 1<<(i+((!v)*16))
 /*
  * Reads a pin from a port
 */
-	#define R(l,i)		((GPIO##l->IDR & (1<<i))>0)
+    #define R(l,i)      ((GPIO##l->IDR & (1<<i))>0)
 #endif
 
 
@@ -74,6 +74,7 @@
 #include "stm32f429i_discovery_ts.h"
 #include "string.h"
 #include "i2c_sht15.h"
+#include "slider_component.h"
 #include "state_machine.h"
 /* USER CODE END Includes */
 
@@ -136,13 +137,14 @@ TS_StateTypeDef TsState;
   MX_FMC_Init();
   MX_TIM2_Init();
   /* USER CODE BEGIN 2 */
-	BSP_LCD_Init();
-	BSP_LCD_LayerDefaultInit(LCD_BACKGROUND_LAYER,LCD_FRAME_BUFFER);
-	BSP_LCD_LayerDefaultInit(LCD_FOREGROUND_LAYER,LCD_FRAME_BUFFER);
-	BSP_LCD_DisplayOn();
-	BSP_LCD_SelectLayer(LCD_FOREGROUND_LAYER);
-	BSP_TS_Init(240, 320);
-	unsigned long last_display_update = HAL_GetTick();
+  BSP_LCD_Init();
+  BSP_LCD_LayerDefaultInit(LCD_BACKGROUND_LAYER,LCD_FRAME_BUFFER);
+  BSP_LCD_LayerDefaultInit(LCD_FOREGROUND_LAYER,LCD_FRAME_BUFFER);
+  BSP_LCD_DisplayOn();
+  BSP_LCD_SelectLayer(LCD_FOREGROUND_LAYER);
+  BSP_TS_Init(240, 320);
+  unsigned long last_display_update = HAL_GetTick();
+  init_sliders();
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -153,36 +155,36 @@ TS_StateTypeDef TsState;
   /* USER CODE END WHILE */
 
   /* USER CODE BEGIN 3 */
-		updateReadings();
-		// Handle periodic drawing
-		int nowMS = HAL_GetTick();
-		if (nowMS-last_display_update > 50) {
-			last_display_update += 50;
-			// Fix very slow cycles ahead
-			if (nowMS-last_display_update > 50) {
-				displayState();
-				last_display_update = nowMS;
-			}
-			displayState();
-		}
-		checkAlarmState();
-		
-		BSP_TS_GetState(&TsState);
-		if(TsState.TouchDetected)
-		{
-			if (!last_state_was_down) {
-				last_state_was_down = 1;
-				processEvent(TOUCH_START, TsState.X, TsState.Y);
-			} else {
-				processEvent(TOUCH_MOVE, TsState.X, TsState.Y);
-			}
-		} else {
-			if (last_state_was_down) {
-				last_state_was_down = 0;
-				processEvent(TOUCH_END, TsState.X, TsState.Y);
-			}
-		}
-		HAL_Delay(10);
+        updateReadings();
+        // Handle periodic drawing
+        int nowMS = HAL_GetTick();
+        if (nowMS-last_display_update > 50) {
+            last_display_update += 50;
+            // Fix very slow cycles ahead
+            if (nowMS-last_display_update > 50) {
+                displayState();
+                last_display_update = nowMS;
+            }
+            displayState();
+        }
+        checkAlarmState();
+
+        BSP_TS_GetState(&TsState);
+        if(TsState.TouchDetected)
+        {
+            if (!last_state_was_down) {
+                last_state_was_down = 1;
+                processEvent(TOUCH_START, TsState.X, TsState.Y);
+            } else {
+                processEvent(TOUCH_MOVE, TsState.X, TsState.Y);
+            }
+        } else {
+            if (last_state_was_down) {
+                last_state_was_down = 0;
+                processEvent(TOUCH_END, TsState.X, TsState.Y);
+            }
+        }
+        HAL_Delay(10);
   }
   /* USER CODE END 3 */
 
@@ -199,13 +201,13 @@ void SystemClock_Config(void)
   RCC_ClkInitTypeDef RCC_ClkInitStruct;
   RCC_PeriphCLKInitTypeDef PeriphClkInitStruct;
 
-    /**Configure the main internal regulator output voltage 
+    /**Configure the main internal regulator output voltage
     */
   __HAL_RCC_PWR_CLK_ENABLE();
 
   __HAL_PWR_VOLTAGESCALING_CONFIG(PWR_REGULATOR_VOLTAGE_SCALE1);
 
-    /**Initializes the CPU, AHB and APB busses clocks 
+    /**Initializes the CPU, AHB and APB busses clocks
     */
   RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSE;
   RCC_OscInitStruct.HSEState = RCC_HSE_ON;
@@ -220,7 +222,7 @@ void SystemClock_Config(void)
     _Error_Handler(__FILE__, __LINE__);
   }
 
-    /**Initializes the CPU, AHB and APB busses clocks 
+    /**Initializes the CPU, AHB and APB busses clocks
     */
   RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_HCLK|RCC_CLOCKTYPE_SYSCLK
                               |RCC_CLOCKTYPE_PCLK1|RCC_CLOCKTYPE_PCLK2;
@@ -243,11 +245,11 @@ void SystemClock_Config(void)
     _Error_Handler(__FILE__, __LINE__);
   }
 
-    /**Configure the Systick interrupt time 
+    /**Configure the Systick interrupt time
     */
   HAL_SYSTICK_Config(HAL_RCC_GetHCLKFreq()/1000);
 
-    /**Configure the Systick 
+    /**Configure the Systick
     */
   HAL_SYSTICK_CLKSourceConfig(SYSTICK_CLKSOURCE_HCLK);
 
@@ -284,7 +286,7 @@ void _Error_Handler(char *file, int line)
   * @retval None
   */
 void assert_failed(uint8_t* file, uint32_t line)
-{ 
+{
   /* USER CODE BEGIN 6 */
   /* User can add his own implementation to report the file name and line number,
      tex: printf("Wrong parameters value: file %s on line %d\r\n", file, line) */
