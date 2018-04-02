@@ -53,3 +53,5 @@ tft\main.o: ..\Drivers\BSP\STM32F429I-Discovery\../Components/stmpe811/stmpe811.
 tft\main.o: ..\Drivers\BSP\STM32F429I-Discovery\../Components/stmpe811/../Common/ts.h
 tft\main.o: ..\Drivers\BSP\STM32F429I-Discovery\../Components/stmpe811/../Common/io.h
 tft\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+tft\main.o: ../Src/i2c_sht15.h
+tft\main.o: ../Src/state_machine.h
