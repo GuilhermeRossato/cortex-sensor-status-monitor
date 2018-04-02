@@ -34,7 +34,7 @@ int last_state_was_down = 0;
 
 void displayState() {
 	static int substate = 0;
-	static int last_reading = 0;
+	static double last_reading = -1000;
 	
 	if (state == DEBUG) {
 		//BSP_LCD_DrawBitmap(1,60,(uint8_t*)ImageBuffer);
@@ -57,13 +57,13 @@ void displayState() {
 		sprintf((char*)buffer,"redraw=%03d ", redraw_info);
 		BSP_LCD_DisplayStringAtLine(6,(uint8_t*)buffer);
 		
-		sprintf((char*)buffer,"LT=%03d ", last_state);
-		BSP_LCD_DisplayStringAtLine(8,(uint8_t*)buffer);
+		//sprintf((char*)buffer,"LT=%03d ", last_state);
+		//BSP_LCD_DisplayStringAtLine(8,(uint8_t*)buffer);
 		
-		sprintf((char*)buffer,"was_d=%03d ", last_state_was_down);
-		BSP_LCD_DisplayStringAtLine(9,(uint8_t*)buffer);
+		//sprintf((char*)buffer,"was_d=%03d ", last_state_was_down);
+		//BSP_LCD_DisplayStringAtLine(9,(uint8_t*)buffer);
 		
-		sprintf((char*)buffer,"humid%c=%04d ", (substate%8)?'*':' ' , last_reading);
+		sprintf((char*)buffer,"hum%c=%f ", (substate%8)?'*':' ' , last_reading);
 		BSP_LCD_DisplayStringAtLine(10,(uint8_t*)buffer);
 	
 		substate++;
@@ -75,7 +75,7 @@ void displayState() {
 	} else if (state == HOME) {
 		if (redraw_info == 0) {
 			BSP_LCD_Clear(LCD_COLOR_WHITE);
-			BSP_LCD_DisplayStringAtLine(1,(uint8_t*)"  DASHBOARD   ");
+			BSP_LCD_DisplayStringAtLine(1,(uint8_t*)"  Trabalho 1  ");
 			redraw_info = 1;
 			sprintf((char*)buffer,"  DEBUG       "); BSP_LCD_DisplayStringAtLine(8,(uint8_t*)buffer);
 			sprintf((char*)buffer,"        MENU  "); BSP_LCD_DisplayStringAtLine(10,(uint8_t*)buffer);
