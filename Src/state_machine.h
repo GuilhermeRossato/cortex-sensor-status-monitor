@@ -12,30 +12,23 @@ enum {
 	ERROR_MODE
 } state = DEBUG;
 
-double temp = 25;
-double humid = 60;
-double speed = 30;
-int selected_element = 0;
+typedef struct {
+	unsigned char updated;
+	unsigned long raw;
+	double value;
+} control_unit;
+
+control_unit temp, humid, speed;
+
 uint8_t buffer[30];
 int last_x=0, last_y=0, last_state=0;
 int redraw_info = 0;
-
-void updateTemp() {
-	temp = 25;
-}
-void updateHumid() {
-	humid = 60;
-}
-void updateSpeed() {
-	speed = 30;
-}
-
+int errNumber = 0;
 int last_state_was_down = 0;
 
 void displayState() {
 	static int substate = 0;
-	static double last_reading = -1000;
-	
+	int updateSomething = (redraw_info == 0 || temp.updated || humid.updated || speed.updated);
 	if (state == DEBUG) {
 		//BSP_LCD_DrawBitmap(1,60,(uint8_t*)ImageBuffer);
 		if (redraw_info == 0) {
@@ -43,28 +36,33 @@ void displayState() {
 			BSP_LCD_Clear(LCD_COLOR_WHITE);
 			BSP_LCD_SetTextColor(LCD_COLOR_RED);
 			BSP_LCD_DisplayStringAtLine(0,(uint8_t*)"01234567890123");
-		}
-		if (substate%8) {
-			last_reading = (int) SHT_read_humid();
+			BSP_LCD_DisplayStringAt(0,279,(uint8_t*)"VOLTAR ", RIGHT_MODE);
+			//sprintf((char*)buffer,"       VOLTAR "); BSP_LCD_DisplayStringAtLine(11,(uint8_t*)buffer);
+			BSP_LCD_DrawRect(111, 268, 115, 40);
 		}
 		
-		sprintf((char*)buffer,"Tick=%08d",HAL_GetTick());
+		sprintf((char*)buffer,"Time=%4.2f s",HAL_GetTick()/1000.0);
 		BSP_LCD_DisplayStringAtLine(2,(uint8_t*)buffer);
 		
 		sprintf((char*)buffer,"X=%03d,Y=%03d", last_x, last_y);
 		BSP_LCD_DisplayStringAtLine(4,(uint8_t*)buffer);
 		
-		sprintf((char*)buffer,"redraw=%03d ", redraw_info);
-		BSP_LCD_DisplayStringAtLine(6,(uint8_t*)buffer);
-		
-		//sprintf((char*)buffer,"LT=%03d ", last_state);
-		//BSP_LCD_DisplayStringAtLine(8,(uint8_t*)buffer);
-		
-		//sprintf((char*)buffer,"was_d=%03d ", last_state_was_down);
-		//BSP_LCD_DisplayStringAtLine(9,(uint8_t*)buffer);
-		
-		sprintf((char*)buffer,"hum%c=%f ", (substate%8)?'*':' ' , last_reading);
-		BSP_LCD_DisplayStringAtLine(10,(uint8_t*)buffer);
+		if (errNumber != 0) {
+			sprintf((char*)buffer,"errNumber=%03d ", errNumber);
+			BSP_LCD_DisplayStringAtLine(6,(uint8_t*)buffer);
+		} else if (updateSomething) {
+			BSP_LCD_SetFont(&Font16);
+			sprintf((char*)buffer," Temp  = %4.3f 'C", temp.value);
+			BSP_LCD_DisplayStringAtLine(8,(uint8_t*)buffer);
+			sprintf((char*)buffer," Humid = %4.3f %%", humid.value);
+			BSP_LCD_DisplayStringAtLine(9,(uint8_t*)buffer);
+			sprintf((char*)buffer," Veloc = %4.3f m/s", speed.value);
+			BSP_LCD_DisplayStringAtLine(10,(uint8_t*)buffer);
+			BSP_LCD_SetFont(&Font24);
+			temp.updated = 0;
+			humid.updated = 0;
+			speed.updated = 0;
+		}
 	
 		substate++;
 		if (redraw_info == 0) {
@@ -77,17 +75,22 @@ void displayState() {
 			BSP_LCD_Clear(LCD_COLOR_WHITE);
 			BSP_LCD_DisplayStringAtLine(1,(uint8_t*)"  Trabalho 1  ");
 			redraw_info = 1;
-			sprintf((char*)buffer,"  DEBUG       "); BSP_LCD_DisplayStringAtLine(8,(uint8_t*)buffer);
-			sprintf((char*)buffer,"        MENU  "); BSP_LCD_DisplayStringAtLine(10,(uint8_t*)buffer);
-			BSP_LCD_DrawRect(16, 185, 120, 30);
-			BSP_LCD_DrawRect(120, 235, 90, 30);
+			BSP_LCD_DisplayStringAtLine(7,(uint8_t*)"   Alarmes   ");
+			sprintf((char*)buffer," DEBUG CONFIG "); BSP_LCD_DisplayStringAtLine(11,(uint8_t*)buffer);
+			BSP_LCD_DrawRect(8, 11*23+3, 102, 30);
+			BSP_LCD_DrawRect(113, 11*23+3, 114, 30);
 		}
-		sprintf((char*)buffer,"Temp  = %03.1f C", temp);
-		BSP_LCD_DisplayStringAtLine(3,(uint8_t*)buffer);
-		sprintf((char*)buffer,"Humid = %03.1f %%", humid);
-		BSP_LCD_DisplayStringAtLine(4,(uint8_t*)buffer);
-		sprintf((char*)buffer,"Veloc = %03.1f m/s", speed);
-		BSP_LCD_DisplayStringAtLine(5,(uint8_t*)buffer);
+		if (updateSomething) {
+			sprintf((char*)buffer,"Temp  = %03.1f C", temp.value);
+			BSP_LCD_DisplayStringAtLine(3,(uint8_t*)buffer);
+			sprintf((char*)buffer,"Humid = %03.1f %%", humid.value);
+			BSP_LCD_DisplayStringAtLine(4,(uint8_t*)buffer);
+			sprintf((char*)buffer,"Veloc = %03.1f m/s", speed.value);
+			BSP_LCD_DisplayStringAtLine(5,(uint8_t*)buffer);
+			temp.updated = 0;
+			humid.updated = 0;
+			speed.updated = 0;
+		}
 	} else if (state == MENU) {
 			BSP_LCD_DrawRect(10, 160, 220, 30);
 			BSP_LCD_DrawRect(10, 200, 220, 30);
@@ -95,20 +98,11 @@ void displayState() {
 		if (redraw_info == 0) {
 			BSP_LCD_Clear(LCD_COLOR_WHITE);
 			BSP_LCD_DisplayStringAtLine(1,(uint8_t*)"     ERRO     ");
+			sprintf((char*)buffer,"errNumber=%03d ", errNumber);
+			BSP_LCD_DisplayStringAtLine(6,(uint8_t*)buffer);
 			redraw_info = 1;
 		}
-	} 
-}
-
-void updateReadings() {
-	static int x = 0;
-	switch (x) {
-		case 0: updateTemp(); break;
-		case 1: updateHumid(); break;
-		case 2: updateSpeed(); break;
 	}
-	x++;
-	HAL_Delay(10);
 }
 
 void checkAlarmState() {
@@ -124,8 +118,10 @@ typedef enum {
 void processEvent(EVENT_TYPE type, int x, int y) {
 	if (type == TOUCH_START) {
 		if (state == DEBUG) {
-			state = HOME;
-			redraw_info = 0;
+			if (x > 111-5 && x < 111+115+5 && y > 268-5 && y < 265+40+5) {
+				state = HOME;
+				redraw_info = 0;
+			}
 		} else if (state == HOME) {
 			state = DEBUG;
 			redraw_info = 0;
@@ -137,5 +133,124 @@ void processEvent(EVENT_TYPE type, int x, int y) {
 	//last_state = (type == TOUCH_START || type == TOUCH_MOVE);
 	if (redraw_info == 2) {
 		redraw_info = 1;
+	}
+}
+
+
+void updateReadings() {
+	static int x = 0;
+	static unsigned char b1, b2;
+	static unsigned long last_request = 0;
+	unsigned long difTime;
+	int ack;
+	double raw;
+	switch (x) {
+		case 0: // Start communication
+			start_i2c_SHT(); break;
+		case 1: // Request humidity
+			envia_byte_i2c(0x05);
+			ack = read_ack_i2c();
+			if (ack == 1) {
+				errNumber = 1;
+				x = -1;
+			} else {
+				last_request = HAL_GetTick();
+				set_SDA_as_input();
+			}
+			break;
+		case 2: // Wait for response of humidity
+			difTime = HAL_GetTick()-last_request;
+			if (difTime > 140) {
+				errNumber = 2; // Timeout
+				x = -1;
+			} else if (difTime > 40) {
+				if (difTime < 70) {
+					HAL_Delay(2);
+				}
+				if (R(G, SDA) == 0) {
+					b1 = 0;
+					b2 = 0;
+				} else {
+					x--;
+				}
+			} else if (difTime > 0) {
+				HAL_Delay(2);
+				x--;
+			} else {
+				 x = -1; errNumber = 3; // Internally too fast
+			}
+			break;
+		case 3:
+			b1 = le_byte_i2c();
+			break;
+		case 4:
+			b2 = le_byte_i2c();
+			break;
+		case 5:
+			raw = ((0xf & b1) << 8) | b2;
+			if (humid.raw != raw) {
+				humid.raw = raw;
+				humid.value = (double) -2.0468F+0.0367F*raw-1.5955E-6*raw*raw;
+				humid.updated = 1;
+			}
+			break;
+		case 6:
+			break;
+		case 7:
+			start_i2c_SHT();
+			break;
+		case 8: // Request temp
+			envia_byte_i2c(0x03);
+			ack = read_ack_i2c();
+			if (ack == 1) {
+				x = -1; errNumber = 4;
+			} else {
+				last_request = HAL_GetTick();
+				set_SDA_as_input();
+			}
+			break;
+		case 9: // Wait for response of temp
+			difTime = HAL_GetTick()-last_request;
+			if (difTime > 340) {
+				errNumber = 5; // Timeout
+				x = -1;
+			} else if (difTime > 50) {
+				if (difTime < 70) {
+					HAL_Delay(2);
+				}
+				if (R(G, SDA) == 0) {
+					b1 = 0;
+					b2 = 0;
+				} else {
+					x--;
+				}
+			} else if (difTime > 0) {
+				HAL_Delay(2);
+				x--;
+			} else {
+				 x = -1; errNumber = 6; // Internally too fast
+			}
+			break;
+		case 10:
+			b1 = le_byte_i2c();
+			break;
+		case 11:
+			b2 = le_byte_i2c();
+			break;
+		case 12:
+			raw = ((0xf & b1) << 8) | b2;
+			if (temp.raw != raw) {
+				temp.raw = raw;
+				temp.value = (double) 0.024F*((double)raw)-37.6F;
+				temp.updated = 1;
+			}
+			break;
+		case 13:
+			x = 0;
+			start_i2c_SHT();
+			break;
+	}
+	if (x >= 0 && x <= 20) { 
+		x = x>20?0:x+1;
 	}
 }
