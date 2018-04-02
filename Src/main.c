@@ -72,6 +72,7 @@
 #include "stm32f429i_discovery_sdram.h"
 #include "stm32f429i_discovery_ts.h"
 #include "string.h"
+#include "i2c_sht15.h"
 #include "state_machine.h"
 /* USER CODE END Includes */
 
