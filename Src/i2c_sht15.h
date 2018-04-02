@@ -7,6 +7,16 @@
 #define SDA 3
 #define DELAY HAL_Delay(1)
 
+enum {
+	RESETED,
+	READY,
+	WAITING_TEMP,
+	WAITING_HUMID,
+	WAITING_C1,
+	WAITING_C2,
+	SHT_ERROR
+} sht_state = RESETED;
+
 void start_i2c_SHT(void) {
 	P(G, SCL, 0);
 	P(G, SDA, 1);
@@ -58,6 +68,7 @@ void set_SDA_as_input() {
 	GPIO_InitStruct.Speed = GPIO_SPEED_LOW;
 	HAL_GPIO_Init(GPIOG, &GPIO_InitStruct);
 }
+
 void set_SDA_as_output() {
 	GPIO_InitTypeDef GPIO_InitStruct;
 	GPIO_InitStruct.Pin = GPIO_PIN_3; // SDA => PG.2
@@ -99,13 +110,14 @@ unsigned char le_byte_i2c() {
 }
 
 void envia_byte_i2c(int dado) {
-	
 	int arr[] = {0, 0, 0, 0, 0, 1, 0, 1};
 	for (int i=0;i<8;i++) {
 		//envia_bit_i2c((dado << (7-i)) % 2);
 		envia_bit_i2c(arr[i]);
 	}
 }
+
+
 
 int SHT_raw_read() {
 	unsigned char b1, b2;
@@ -115,7 +127,7 @@ int SHT_raw_read() {
 	if (ack == 1) { return -1; }
 	HAL_Delay(20);
 	set_SDA_as_input();
-	int count = 0, r = 0;
+	int count = 0;
 	while (count < 80 && R(G, SDA)) {
 		count++;
 		HAL_Delay(1);
@@ -129,10 +141,37 @@ int SHT_raw_read() {
 }
 
 double SHT_read_humid() {
-	double raw = (int)SHT_raw_read();
-	if (raw < 0) {
-		return raw;
-	} else {
-		return -2.0468F+0.0367*raw-1.5955E-6*raw*raw;
+	static unsigned long started_time = 0;
+	if (sht_state == SHT_ERROR) {
+		return -3;
 	}
+	if (sht_state == RESETED) {
+		start_i2c_SHT();
+		sht_state = READY;
+	}
+	
+	if (sht_state == READY) {
+		envia_byte_i2c(0x05);
+		int ack = read_ack_i2c();
+		if (ack == 1) { 
+			started_time = HAL_GetTick()+10000;
+			sht_state = SHT_ERROR;
+		} else {
+			started_time = HAL_GetTick();
+			sht_state = WAITING_HUMID;
+		}
+	}
+	if (sht_state == WAITING_HUMID) {
+		if (HAL_GetTick() - started_time > 80) {
+			unsigned char b1, b2;
+			b1 = le_byte_i2c();
+			b2 = le_byte_i2c();
+			sht_state = READY;
+			double raw = (b1 << 8) + b2;
+			return -2.0468F+0.0367*raw-1.5955E-6*raw*raw;
+		} else {
+			return -2; // waiting
+		}
+	}
+	return -1; // unhandled state
 }

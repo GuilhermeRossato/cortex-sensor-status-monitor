@@ -1,10 +1,10 @@
 Dependencies for Project 'TFT', Target 'TFT': (DO NOT MODIFY !)
-F (startup_stm32f429xx.s)(0x5AB2C3A2)(--cpu Cortex-M4.fp -g --apcs=interwork --pd "__MICROLIB SETA 1"-I C:\Users\15104095\Desktop\TFT\MDK-ARM\RTE-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.6.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-I C:\Keil_v5\ARM\CMSIS\Include--pd "__UVISION_VERSION SETA 516" --pd "STM32F429xx SETA 1"--list startup_stm32f429xx.lst --xref -o tft\startup_stm32f429xx.o --depend tft\startup_stm32f429xx.d)
+F (startup_stm32f429xx.s)(0x5AB961D1)(--cpu Cortex-M4.fp -g --apcs=interwork --pd "__MICROLIB SETA 1"-I C:\Users\15104095\Desktop\TFT\MDK-ARM\RTE-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.6.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-I C:\Keil_v5\ARM\CMSIS\Include--pd "__UVISION_VERSION SETA 516" --pd "STM32F429xx SETA 1"--list startup_stm32f429xx.lst --xref -o tft\startup_stm32f429xx.o --depend tft\startup_stm32f429xx.d)
 F (..\Drivers\BSP\STM32F429I-Discovery\stm32f429i_discovery.c)(0x5A679685)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I..\Drivers\BSP\STM32F429I-Discovery -I..\Drivers\BSP\Components\ili9341 -I..\Drivers\BSP\Components\stmpe811-I C:\Users\15104095\Desktop\TFT\MDK-ARM\RTE-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.6.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-I C:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="516" -DSTM32F429xx -DUSE_HAL_DRIVER -DSTM32F429xx-o tft\stm32f429i_discovery.o --omf_browse tft\stm32f429i_discovery.crf --depend tft\stm32f429i_discovery.d)
 I (..\Drivers\BSP\STM32F429I-Discovery\stm32f429i_discovery.h)(0x5A679685)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x5A679692)
-I (../Inc/stm32f4xx_hal_conf.h)(0x5AB2C3A0)
-I (../Inc/main.h)(0x5AB2C3A0)
+I (../Inc/stm32f4xx_hal_conf.h)(0x5AB961CD)
+I (../Inc/main.h)(0x5AB961CE)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x5A679692)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x5A679692)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x5A679685)
@@ -37,12 +37,14 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_ltdc_ex.h)(0x5A679692)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h)(0x5A679692)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x5A679692)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h)(0x5A679692)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x5A679692)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x5A679692)
 F (..\Drivers\BSP\STM32F429I-Discovery\stm32f429i_discovery_io.c)(0x5A679685)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I..\Drivers\BSP\STM32F429I-Discovery -I..\Drivers\BSP\Components\ili9341 -I..\Drivers\BSP\Components\stmpe811-I C:\Users\15104095\Desktop\TFT\MDK-ARM\RTE-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.6.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-I C:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="516" -DSTM32F429xx -DUSE_HAL_DRIVER -DSTM32F429xx-o tft\stm32f429i_discovery_io.o --omf_browse tft\stm32f429i_discovery_io.crf --depend tft\stm32f429i_discovery_io.d)
 I (..\Drivers\BSP\STM32F429I-Discovery\stm32f429i_discovery_io.h)(0x5A679685)
 I (..\Drivers\BSP\STM32F429I-Discovery\stm32f429i_discovery.h)(0x5A679685)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x5A679692)
-I (../Inc/stm32f4xx_hal_conf.h)(0x5AB2C3A0)
-I (../Inc/main.h)(0x5AB2C3A0)
+I (../Inc/stm32f4xx_hal_conf.h)(0x5AB961CD)
+I (../Inc/main.h)(0x5AB961CE)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x5A679692)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x5A679692)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x5A679685)
@@ -75,6 +77,8 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_ltdc_ex.h)(0x5A679692)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h)(0x5A679692)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x5A679692)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h)(0x5A679692)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x5A679692)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x5A679692)
 I (..\Drivers\BSP\STM32F429I-Discovery\../Components/stmpe811/stmpe811.h)(0x5A679683)
 I (..\Drivers\BSP\STM32F429I-Discovery\../Components/stmpe811/../Common/ts.h)(0x5A679683)
 I (..\Drivers\BSP\STM32F429I-Discovery\../Components/stmpe811/../Common/io.h)(0x5A679683)
@@ -82,8 +86,8 @@ F (..\Drivers\BSP\STM32F429I-Discovery\stm32f429i_discovery_lcd.c)(0x5A679685)(-
 I (..\Drivers\BSP\STM32F429I-Discovery\stm32f429i_discovery_lcd.h)(0x5A679685)
 I (..\Drivers\BSP\STM32F429I-Discovery\stm32f429i_discovery.h)(0x5A679685)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x5A679692)
-I (../Inc/stm32f4xx_hal_conf.h)(0x5AB2C3A0)
-I (../Inc/main.h)(0x5AB2C3A0)
+I (../Inc/stm32f4xx_hal_conf.h)(0x5AB961CD)
+I (../Inc/main.h)(0x5AB961CE)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x5A679692)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x5A679692)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x5A679685)
@@ -116,6 +120,8 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_ltdc_ex.h)(0x5A679692)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h)(0x5A679692)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x5A679692)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h)(0x5A679692)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x5A679692)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x5A679692)
 I (..\Drivers\BSP\STM32F429I-Discovery\stm32f429i_discovery_sdram.h)(0x5A679685)
 I (..\Drivers\BSP\STM32F429I-Discovery\../../../Utilities/Fonts/fonts.h)(0x5A6797BC)
 I (..\Drivers\BSP\STM32F429I-Discovery\../Components/ili9341/ili9341.h)(0x5A679683)
@@ -129,8 +135,8 @@ F (..\Drivers\BSP\STM32F429I-Discovery\stm32f429i_discovery_sdram.c)(0x5A679685)
 I (..\Drivers\BSP\STM32F429I-Discovery\stm32f429i_discovery_sdram.h)(0x5A679685)
 I (..\Drivers\BSP\STM32F429I-Discovery\stm32f429i_discovery.h)(0x5A679685)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x5A679692)
-I (../Inc/stm32f4xx_hal_conf.h)(0x5AB2C3A0)
-I (../Inc/main.h)(0x5AB2C3A0)
+I (../Inc/stm32f4xx_hal_conf.h)(0x5AB961CD)
+I (../Inc/main.h)(0x5AB961CE)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x5A679692)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x5A679692)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x5A679685)
@@ -163,12 +169,14 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_ltdc_ex.h)(0x5A679692)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h)(0x5A679692)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x5A679692)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h)(0x5A679692)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x5A679692)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x5A679692)
 F (..\Drivers\BSP\STM32F429I-Discovery\stm32f429i_discovery_ts.c)(0x5A679685)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I..\Drivers\BSP\STM32F429I-Discovery -I..\Drivers\BSP\Components\ili9341 -I..\Drivers\BSP\Components\stmpe811-I C:\Users\15104095\Desktop\TFT\MDK-ARM\RTE-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.6.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-I C:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="516" -DSTM32F429xx -DUSE_HAL_DRIVER -DSTM32F429xx-o tft\stm32f429i_discovery_ts.o --omf_browse tft\stm32f429i_discovery_ts.crf --depend tft\stm32f429i_discovery_ts.d)
 I (..\Drivers\BSP\STM32F429I-Discovery\stm32f429i_discovery_ts.h)(0x5A679685)
 I (..\Drivers\BSP\STM32F429I-Discovery\stm32f429i_discovery.h)(0x5A679685)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x5A679692)
-I (../Inc/stm32f4xx_hal_conf.h)(0x5AB2C3A0)
-I (../Inc/main.h)(0x5AB2C3A0)
+I (../Inc/stm32f4xx_hal_conf.h)(0x5AB961CD)
+I (../Inc/main.h)(0x5AB961CE)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x5A679692)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x5A679692)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x5A679685)
@@ -201,6 +209,8 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_ltdc_ex.h)(0x5A679692)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h)(0x5A679692)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x5A679692)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h)(0x5A679692)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x5A679692)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x5A679692)
 I (..\Drivers\BSP\STM32F429I-Discovery\../Components/stmpe811/stmpe811.h)(0x5A679683)
 I (..\Drivers\BSP\STM32F429I-Discovery\../Components/stmpe811/../Common/ts.h)(0x5A679683)
 I (..\Drivers\BSP\STM32F429I-Discovery\../Components/stmpe811/../Common/io.h)(0x5A679683)
@@ -225,8 +235,8 @@ I (../Drivers/CMSIS/Include/core_cmFunc.h)(0x5A67968F)
 I (../Drivers/CMSIS/Include/core_cmSimd.h)(0x5A67968F)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/system_stm32f4xx.h)(0x5A679685)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x5A679692)
-I (../Inc/stm32f4xx_hal_conf.h)(0x5AB2C3A0)
-I (../Inc/main.h)(0x5AB2C3A0)
+I (../Inc/stm32f4xx_hal_conf.h)(0x5AB961CD)
+I (../Inc/main.h)(0x5AB961CE)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x5A679692)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x5A679692)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x5A679692)
@@ -250,10 +260,12 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_ltdc_ex.h)(0x5A679692)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h)(0x5A679692)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x5A679692)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h)(0x5A679692)
-F (../Src/stm32f4xx_it.c)(0x5AB2C39F)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I..\Drivers\BSP\STM32F429I-Discovery -I..\Drivers\BSP\Components\ili9341 -I..\Drivers\BSP\Components\stmpe811-I C:\Users\15104095\Desktop\TFT\MDK-ARM\RTE-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.6.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-I C:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="516" -DSTM32F429xx -DUSE_HAL_DRIVER -DSTM32F429xx-o tft\stm32f4xx_it.o --omf_browse tft\stm32f4xx_it.crf --depend tft\stm32f4xx_it.d)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x5A679692)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x5A679692)
+F (../Src/stm32f4xx_it.c)(0x5AB961CC)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I..\Drivers\BSP\STM32F429I-Discovery -I..\Drivers\BSP\Components\ili9341 -I..\Drivers\BSP\Components\stmpe811-I C:\Users\15104095\Desktop\TFT\MDK-ARM\RTE-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.6.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-I C:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="516" -DSTM32F429xx -DUSE_HAL_DRIVER -DSTM32F429xx-o tft\stm32f4xx_it.o --omf_browse tft\stm32f4xx_it.crf --depend tft\stm32f4xx_it.d)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x5A679692)
-I (../Inc/stm32f4xx_hal_conf.h)(0x5AB2C3A0)
-I (../Inc/main.h)(0x5AB2C3A0)
+I (../Inc/stm32f4xx_hal_conf.h)(0x5AB961CD)
+I (../Inc/main.h)(0x5AB961CE)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x5A679692)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x5A679692)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x5A679685)
@@ -286,11 +298,13 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_ltdc_ex.h)(0x5A679692)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h)(0x5A679692)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x5A679692)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h)(0x5A679692)
-I (../Inc/stm32f4xx_it.h)(0x5AB2C39F)
-F (../Src/stm32f4xx_hal_msp.c)(0x5AB2C3A0)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I..\Drivers\BSP\STM32F429I-Discovery -I..\Drivers\BSP\Components\ili9341 -I..\Drivers\BSP\Components\stmpe811-I C:\Users\15104095\Desktop\TFT\MDK-ARM\RTE-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.6.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-I C:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="516" -DSTM32F429xx -DUSE_HAL_DRIVER -DSTM32F429xx-o tft\stm32f4xx_hal_msp.o --omf_browse tft\stm32f4xx_hal_msp.crf --depend tft\stm32f4xx_hal_msp.d)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x5A679692)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x5A679692)
+I (../Inc/stm32f4xx_it.h)(0x5AB961CD)
+F (../Src/stm32f4xx_hal_msp.c)(0x5AB961CD)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I..\Drivers\BSP\STM32F429I-Discovery -I..\Drivers\BSP\Components\ili9341 -I..\Drivers\BSP\Components\stmpe811-I C:\Users\15104095\Desktop\TFT\MDK-ARM\RTE-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.6.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-I C:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="516" -DSTM32F429xx -DUSE_HAL_DRIVER -DSTM32F429xx-o tft\stm32f4xx_hal_msp.o --omf_browse tft\stm32f4xx_hal_msp.crf --depend tft\stm32f4xx_hal_msp.d)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x5A679692)
-I (../Inc/stm32f4xx_hal_conf.h)(0x5AB2C3A0)
-I (../Inc/main.h)(0x5AB2C3A0)
+I (../Inc/stm32f4xx_hal_conf.h)(0x5AB961CD)
+I (../Inc/main.h)(0x5AB961CE)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x5A679692)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x5A679692)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x5A679685)
@@ -323,10 +337,12 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_ltdc_ex.h)(0x5A679692)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h)(0x5A679692)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x5A679692)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h)(0x5A679692)
-F (../Src/main.c)(0x5AB2C3A1)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I..\Drivers\BSP\STM32F429I-Discovery -I..\Drivers\BSP\Components\ili9341 -I..\Drivers\BSP\Components\stmpe811-I C:\Users\15104095\Desktop\TFT\MDK-ARM\RTE-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.6.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-I C:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="516" -DSTM32F429xx -DUSE_HAL_DRIVER -DSTM32F429xx-o tft\main.o --omf_browse tft\main.crf --depend tft\main.d)
-I (../Inc/main.h)(0x5AB2C3A0)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x5A679692)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x5A679692)
+F (../Src/main.c)(0x5AB96F21)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I..\Drivers\BSP\STM32F429I-Discovery -I..\Drivers\BSP\Components\ili9341 -I..\Drivers\BSP\Components\stmpe811-I C:\Users\15104095\Desktop\TFT\MDK-ARM\RTE-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.6.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-I C:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="516" -DSTM32F429xx -DUSE_HAL_DRIVER -DSTM32F429xx-o tft\main.o --omf_browse tft\main.crf --depend tft\main.d)
+I (../Inc/main.h)(0x5AB961CE)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x5A679692)
-I (../Inc/stm32f4xx_hal_conf.h)(0x5AB2C3A0)
+I (../Inc/stm32f4xx_hal_conf.h)(0x5AB961CD)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x5A679692)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x5A679692)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x5A679685)
@@ -359,12 +375,15 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_ltdc_ex.h)(0x5A679692)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h)(0x5A679692)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x5A679692)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h)(0x5A679692)
-I (../Inc/dma2d.h)(0x5AB2C39E)
-I (../Inc/i2c.h)(0x5AB2C39E)
-I (../Inc/ltdc.h)(0x5AB2C39F)
-I (../Inc/spi.h)(0x5AB2C39F)
-I (../Inc/gpio.h)(0x5AB2C39D)
-I (../Inc/fmc.h)(0x5AB2C39E)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x5A679692)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x5A679692)
+I (../Inc/dma2d.h)(0x5AB961CB)
+I (../Inc/i2c.h)(0x5AB961CB)
+I (../Inc/ltdc.h)(0x5AB961CC)
+I (../Inc/spi.h)(0x5AB961CC)
+I (../Inc/tim.h)(0x5AB961CC)
+I (../Inc/gpio.h)(0x5AB961C9)
+I (../Inc/fmc.h)(0x5AB961CB)
 I (..\Drivers\BSP\STM32F429I-Discovery\stm32f429i_discovery_lcd.h)(0x5A679685)
 I (..\Drivers\BSP\STM32F429I-Discovery\stm32f429i_discovery.h)(0x5A679685)
 I (..\Drivers\BSP\STM32F429I-Discovery\stm32f429i_discovery_sdram.h)(0x5A679685)
@@ -376,13 +395,13 @@ I (..\Drivers\BSP\STM32F429I-Discovery\../Components/stmpe811/stmpe811.h)(0x5A67
 I (..\Drivers\BSP\STM32F429I-Discovery\../Components/stmpe811/../Common/ts.h)(0x5A679683)
 I (..\Drivers\BSP\STM32F429I-Discovery\../Components/stmpe811/../Common/io.h)(0x5A679683)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x55AF8292)
-I (../Src/i2c_sht15.h)(0x5AB2D7F3)
-I (../Src/state_machine.h)(0x5AB2D66B)
-F (../Src/fmc.c)(0x5AB2C39E)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I..\Drivers\BSP\STM32F429I-Discovery -I..\Drivers\BSP\Components\ili9341 -I..\Drivers\BSP\Components\stmpe811-I C:\Users\15104095\Desktop\TFT\MDK-ARM\RTE-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.6.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-I C:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="516" -DSTM32F429xx -DUSE_HAL_DRIVER -DSTM32F429xx-o tft\fmc.o --omf_browse tft\fmc.crf --depend tft\fmc.d)
-I (../Inc/fmc.h)(0x5AB2C39E)
+I (../Src/i2c_sht15.h)(0x5AB96633)
+I (../Src/state_machine.h)(0x5AB973D2)
+F (../Src/fmc.c)(0x5AB961CB)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I..\Drivers\BSP\STM32F429I-Discovery -I..\Drivers\BSP\Components\ili9341 -I..\Drivers\BSP\Components\stmpe811-I C:\Users\15104095\Desktop\TFT\MDK-ARM\RTE-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.6.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-I C:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="516" -DSTM32F429xx -DUSE_HAL_DRIVER -DSTM32F429xx-o tft\fmc.o --omf_browse tft\fmc.crf --depend tft\fmc.d)
+I (../Inc/fmc.h)(0x5AB961CB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x5A679692)
-I (../Inc/stm32f4xx_hal_conf.h)(0x5AB2C3A0)
-I (../Inc/main.h)(0x5AB2C3A0)
+I (../Inc/stm32f4xx_hal_conf.h)(0x5AB961CD)
+I (../Inc/main.h)(0x5AB961CE)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x5A679692)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x5A679692)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x5A679685)
@@ -415,12 +434,14 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_ltdc_ex.h)(0x5A679692)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h)(0x5A679692)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x5A679692)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h)(0x5A679692)
-I (../Inc/gpio.h)(0x5AB2C39D)
-F (../Src/spi.c)(0x5AB2C39F)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I..\Drivers\BSP\STM32F429I-Discovery -I..\Drivers\BSP\Components\ili9341 -I..\Drivers\BSP\Components\stmpe811-I C:\Users\15104095\Desktop\TFT\MDK-ARM\RTE-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.6.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-I C:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="516" -DSTM32F429xx -DUSE_HAL_DRIVER -DSTM32F429xx-o tft\spi.o --omf_browse tft\spi.crf --depend tft\spi.d)
-I (../Inc/spi.h)(0x5AB2C39F)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x5A679692)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x5A679692)
+I (../Inc/gpio.h)(0x5AB961C9)
+F (../Src/spi.c)(0x5AB961CC)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I..\Drivers\BSP\STM32F429I-Discovery -I..\Drivers\BSP\Components\ili9341 -I..\Drivers\BSP\Components\stmpe811-I C:\Users\15104095\Desktop\TFT\MDK-ARM\RTE-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.6.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-I C:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="516" -DSTM32F429xx -DUSE_HAL_DRIVER -DSTM32F429xx-o tft\spi.o --omf_browse tft\spi.crf --depend tft\spi.d)
+I (../Inc/spi.h)(0x5AB961CC)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x5A679692)
-I (../Inc/stm32f4xx_hal_conf.h)(0x5AB2C3A0)
-I (../Inc/main.h)(0x5AB2C3A0)
+I (../Inc/stm32f4xx_hal_conf.h)(0x5AB961CD)
+I (../Inc/main.h)(0x5AB961CE)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x5A679692)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x5A679692)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x5A679685)
@@ -453,12 +474,14 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_ltdc_ex.h)(0x5A679692)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h)(0x5A679692)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x5A679692)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h)(0x5A679692)
-I (../Inc/gpio.h)(0x5AB2C39D)
-F (../Src/ltdc.c)(0x5AB2C39F)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I..\Drivers\BSP\STM32F429I-Discovery -I..\Drivers\BSP\Components\ili9341 -I..\Drivers\BSP\Components\stmpe811-I C:\Users\15104095\Desktop\TFT\MDK-ARM\RTE-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.6.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-I C:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="516" -DSTM32F429xx -DUSE_HAL_DRIVER -DSTM32F429xx-o tft\ltdc.o --omf_browse tft\ltdc.crf --depend tft\ltdc.d)
-I (../Inc/ltdc.h)(0x5AB2C39F)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x5A679692)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x5A679692)
+I (../Inc/gpio.h)(0x5AB961C9)
+F (../Src/ltdc.c)(0x5AB961CC)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I..\Drivers\BSP\STM32F429I-Discovery -I..\Drivers\BSP\Components\ili9341 -I..\Drivers\BSP\Components\stmpe811-I C:\Users\15104095\Desktop\TFT\MDK-ARM\RTE-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.6.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-I C:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="516" -DSTM32F429xx -DUSE_HAL_DRIVER -DSTM32F429xx-o tft\ltdc.o --omf_browse tft\ltdc.crf --depend tft\ltdc.d)
+I (../Inc/ltdc.h)(0x5AB961CC)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x5A679692)
-I (../Inc/stm32f4xx_hal_conf.h)(0x5AB2C3A0)
-I (../Inc/main.h)(0x5AB2C3A0)
+I (../Inc/stm32f4xx_hal_conf.h)(0x5AB961CD)
+I (../Inc/main.h)(0x5AB961CE)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x5A679692)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x5A679692)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x5A679685)
@@ -491,12 +514,14 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_ltdc_ex.h)(0x5A679692)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h)(0x5A679692)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x5A679692)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h)(0x5A679692)
-I (../Inc/gpio.h)(0x5AB2C39D)
-F (../Src/dma2d.c)(0x5AB2C39E)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I..\Drivers\BSP\STM32F429I-Discovery -I..\Drivers\BSP\Components\ili9341 -I..\Drivers\BSP\Components\stmpe811-I C:\Users\15104095\Desktop\TFT\MDK-ARM\RTE-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.6.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-I C:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="516" -DSTM32F429xx -DUSE_HAL_DRIVER -DSTM32F429xx-o tft\dma2d.o --omf_browse tft\dma2d.crf --depend tft\dma2d.d)
-I (../Inc/dma2d.h)(0x5AB2C39E)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x5A679692)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x5A679692)
+I (../Inc/gpio.h)(0x5AB961C9)
+F (../Src/dma2d.c)(0x5AB961CA)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I..\Drivers\BSP\STM32F429I-Discovery -I..\Drivers\BSP\Components\ili9341 -I..\Drivers\BSP\Components\stmpe811-I C:\Users\15104095\Desktop\TFT\MDK-ARM\RTE-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.6.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-I C:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="516" -DSTM32F429xx -DUSE_HAL_DRIVER -DSTM32F429xx-o tft\dma2d.o --omf_browse tft\dma2d.crf --depend tft\dma2d.d)
+I (../Inc/dma2d.h)(0x5AB961CB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x5A679692)
-I (../Inc/stm32f4xx_hal_conf.h)(0x5AB2C3A0)
-I (../Inc/main.h)(0x5AB2C3A0)
+I (../Inc/stm32f4xx_hal_conf.h)(0x5AB961CD)
+I (../Inc/main.h)(0x5AB961CE)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x5A679692)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x5A679692)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x5A679685)
@@ -529,11 +554,13 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_ltdc_ex.h)(0x5A679692)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h)(0x5A679692)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x5A679692)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h)(0x5A679692)
-F (../Src/gpio.c)(0x5AB2C39D)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I..\Drivers\BSP\STM32F429I-Discovery -I..\Drivers\BSP\Components\ili9341 -I..\Drivers\BSP\Components\stmpe811-I C:\Users\15104095\Desktop\TFT\MDK-ARM\RTE-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.6.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-I C:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="516" -DSTM32F429xx -DUSE_HAL_DRIVER -DSTM32F429xx-o tft\gpio.o --omf_browse tft\gpio.crf --depend tft\gpio.d)
-I (../Inc/gpio.h)(0x5AB2C39D)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x5A679692)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x5A679692)
+F (../Src/gpio.c)(0x5AB961C9)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I..\Drivers\BSP\STM32F429I-Discovery -I..\Drivers\BSP\Components\ili9341 -I..\Drivers\BSP\Components\stmpe811-I C:\Users\15104095\Desktop\TFT\MDK-ARM\RTE-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.6.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-I C:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="516" -DSTM32F429xx -DUSE_HAL_DRIVER -DSTM32F429xx-o tft\gpio.o --omf_browse tft\gpio.crf --depend tft\gpio.d)
+I (../Inc/gpio.h)(0x5AB961C9)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x5A679692)
-I (../Inc/stm32f4xx_hal_conf.h)(0x5AB2C3A0)
-I (../Inc/main.h)(0x5AB2C3A0)
+I (../Inc/stm32f4xx_hal_conf.h)(0x5AB961CD)
+I (../Inc/main.h)(0x5AB961CE)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x5A679692)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x5A679692)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x5A679685)
@@ -566,11 +593,13 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_ltdc_ex.h)(0x5A679692)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h)(0x5A679692)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x5A679692)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h)(0x5A679692)
-F (../Src/i2c.c)(0x5AB2C39E)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I..\Drivers\BSP\STM32F429I-Discovery -I..\Drivers\BSP\Components\ili9341 -I..\Drivers\BSP\Components\stmpe811-I C:\Users\15104095\Desktop\TFT\MDK-ARM\RTE-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.6.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-I C:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="516" -DSTM32F429xx -DUSE_HAL_DRIVER -DSTM32F429xx-o tft\i2c.o --omf_browse tft\i2c.crf --depend tft\i2c.d)
-I (../Inc/i2c.h)(0x5AB2C39E)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x5A679692)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x5A679692)
+F (../Src/i2c.c)(0x5AB961CB)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I..\Drivers\BSP\STM32F429I-Discovery -I..\Drivers\BSP\Components\ili9341 -I..\Drivers\BSP\Components\stmpe811-I C:\Users\15104095\Desktop\TFT\MDK-ARM\RTE-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.6.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-I C:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="516" -DSTM32F429xx -DUSE_HAL_DRIVER -DSTM32F429xx-o tft\i2c.o --omf_browse tft\i2c.crf --depend tft\i2c.d)
+I (../Inc/i2c.h)(0x5AB961CB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x5A679692)
-I (../Inc/stm32f4xx_hal_conf.h)(0x5AB2C3A0)
-I (../Inc/main.h)(0x5AB2C3A0)
+I (../Inc/stm32f4xx_hal_conf.h)(0x5AB961CD)
+I (../Inc/main.h)(0x5AB961CE)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x5A679692)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x5A679692)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x5A679685)
@@ -603,13 +632,54 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_ltdc_ex.h)(0x5A679692)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h)(0x5A679692)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x5A679692)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h)(0x5A679692)
-I (../Inc/gpio.h)(0x5AB2C39D)
-F (..\Src\i2c_sht15.h)(0x5AB2D7F3)()
-F (..\Src\state_machine.h)(0x5AB2D66B)()
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x5A679692)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x5A679692)
+I (../Inc/gpio.h)(0x5AB961C9)
+F (..\Src\i2c_sht15.h)(0x5AB96633)()
+F (..\Src\state_machine.h)(0x5AB973D2)()
+F (../Src/tim.c)(0x5AB961CC)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I..\Drivers\BSP\STM32F429I-Discovery -I..\Drivers\BSP\Components\ili9341 -I..\Drivers\BSP\Components\stmpe811-I C:\Users\15104095\Desktop\TFT\MDK-ARM\RTE-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.6.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-I C:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="516" -DSTM32F429xx -DUSE_HAL_DRIVER -DSTM32F429xx-o tft\tim.o --omf_browse tft\tim.crf --depend tft\tim.d)
+I (../Inc/tim.h)(0x5AB961CC)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x5A679692)
+I (../Inc/stm32f4xx_hal_conf.h)(0x5AB961CD)
+I (../Inc/main.h)(0x5AB961CE)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x5A679692)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x5A679692)
+I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x5A679685)
+I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f429xx.h)(0x5A679685)
+I (../Drivers/CMSIS/Include/core_cm4.h)(0x5A67968F)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x55AF8292)
+I (../Drivers/CMSIS/Include/core_cmInstr.h)(0x5A67968F)
+I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x5A67968F)
+I (../Drivers/CMSIS/Include/core_cmFunc.h)(0x5A67968F)
+I (../Drivers/CMSIS/Include/core_cmSimd.h)(0x5A67968F)
+I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/system_stm32f4xx.h)(0x5A679685)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x5A679692)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x55AF8292)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc_ex.h)(0x5A679692)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h)(0x5A679692)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio_ex.h)(0x5A679692)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h)(0x5A679692)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma_ex.h)(0x5A679692)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h)(0x5A679692)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma2d.h)(0x5A679692)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h)(0x5A679692)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h)(0x5A679692)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ramfunc.h)(0x5A679692)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_sdram.h)(0x5A679692)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_fmc.h)(0x5A679692)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c.h)(0x5A679692)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c_ex.h)(0x5A679692)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_ltdc.h)(0x5A679692)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_ltdc_ex.h)(0x5A679692)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h)(0x5A679692)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x5A679692)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h)(0x5A679692)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x5A679692)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x5A679692)
 F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_sdram.c)(0x5A679693)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I..\Drivers\BSP\STM32F429I-Discovery -I..\Drivers\BSP\Components\ili9341 -I..\Drivers\BSP\Components\stmpe811-I C:\Users\15104095\Desktop\TFT\MDK-ARM\RTE-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.6.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-I C:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="516" -DSTM32F429xx -DUSE_HAL_DRIVER -DSTM32F429xx-o tft\stm32f4xx_hal_sdram.o --omf_browse tft\stm32f4xx_hal_sdram.crf --depend tft\stm32f4xx_hal_sdram.d)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x5A679692)
-I (../Inc/stm32f4xx_hal_conf.h)(0x5AB2C3A0)
-I (../Inc/main.h)(0x5AB2C3A0)
+I (../Inc/stm32f4xx_hal_conf.h)(0x5AB961CD)
+I (../Inc/main.h)(0x5AB961CE)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x5A679692)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x5A679692)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x5A679685)
@@ -642,10 +712,12 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_ltdc_ex.h)(0x5A679692)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h)(0x5A679692)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x5A679692)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h)(0x5A679692)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x5A679692)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x5A679692)
 F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c)(0x5A679693)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I..\Drivers\BSP\STM32F429I-Discovery -I..\Drivers\BSP\Components\ili9341 -I..\Drivers\BSP\Components\stmpe811-I C:\Users\15104095\Desktop\TFT\MDK-ARM\RTE-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.6.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-I C:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="516" -DSTM32F429xx -DUSE_HAL_DRIVER -DSTM32F429xx-o tft\stm32f4xx_hal_flash_ex.o --omf_browse tft\stm32f4xx_hal_flash_ex.crf --depend tft\stm32f4xx_hal_flash_ex.d)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x5A679692)
-I (../Inc/stm32f4xx_hal_conf.h)(0x5AB2C3A0)
-I (../Inc/main.h)(0x5AB2C3A0)
+I (../Inc/stm32f4xx_hal_conf.h)(0x5AB961CD)
+I (../Inc/main.h)(0x5AB961CE)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x5A679692)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x5A679692)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x5A679685)
@@ -678,10 +750,12 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_ltdc_ex.h)(0x5A679692)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h)(0x5A679692)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x5A679692)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h)(0x5A679692)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x5A679692)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x5A679692)
 F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_ltdc_ex.c)(0x5A679693)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I..\Drivers\BSP\STM32F429I-Discovery -I..\Drivers\BSP\Components\ili9341 -I..\Drivers\BSP\Components\stmpe811-I C:\Users\15104095\Desktop\TFT\MDK-ARM\RTE-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.6.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-I C:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="516" -DSTM32F429xx -DUSE_HAL_DRIVER -DSTM32F429xx-o tft\stm32f4xx_hal_ltdc_ex.o --omf_browse tft\stm32f4xx_hal_ltdc_ex.crf --depend tft\stm32f4xx_hal_ltdc_ex.d)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x5A679692)
-I (../Inc/stm32f4xx_hal_conf.h)(0x5AB2C3A0)
-I (../Inc/main.h)(0x5AB2C3A0)
+I (../Inc/stm32f4xx_hal_conf.h)(0x5AB961CD)
+I (../Inc/main.h)(0x5AB961CE)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x5A679692)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x5A679692)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x5A679685)
@@ -714,10 +788,12 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_ltdc_ex.h)(0x5A679692)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h)(0x5A679692)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x5A679692)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h)(0x5A679692)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x5A679692)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x5A679692)
 F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c)(0x5A679693)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I..\Drivers\BSP\STM32F429I-Discovery -I..\Drivers\BSP\Components\ili9341 -I..\Drivers\BSP\Components\stmpe811-I C:\Users\15104095\Desktop\TFT\MDK-ARM\RTE-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.6.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-I C:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="516" -DSTM32F429xx -DUSE_HAL_DRIVER -DSTM32F429xx-o tft\stm32f4xx_hal_pwr.o --omf_browse tft\stm32f4xx_hal_pwr.crf --depend tft\stm32f4xx_hal_pwr.d)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x5A679692)
-I (../Inc/stm32f4xx_hal_conf.h)(0x5AB2C3A0)
-I (../Inc/main.h)(0x5AB2C3A0)
+I (../Inc/stm32f4xx_hal_conf.h)(0x5AB961CD)
+I (../Inc/main.h)(0x5AB961CE)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x5A679692)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x5A679692)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x5A679685)
@@ -750,10 +826,12 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_ltdc_ex.h)(0x5A679692)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h)(0x5A679692)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x5A679692)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h)(0x5A679692)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x5A679692)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x5A679692)
 F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c_ex.c)(0x5A679693)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I..\Drivers\BSP\STM32F429I-Discovery -I..\Drivers\BSP\Components\ili9341 -I..\Drivers\BSP\Components\stmpe811-I C:\Users\15104095\Desktop\TFT\MDK-ARM\RTE-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.6.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-I C:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="516" -DSTM32F429xx -DUSE_HAL_DRIVER -DSTM32F429xx-o tft\stm32f4xx_hal_i2c_ex.o --omf_browse tft\stm32f4xx_hal_i2c_ex.crf --depend tft\stm32f4xx_hal_i2c_ex.d)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x5A679692)
-I (../Inc/stm32f4xx_hal_conf.h)(0x5AB2C3A0)
-I (../Inc/main.h)(0x5AB2C3A0)
+I (../Inc/stm32f4xx_hal_conf.h)(0x5AB961CD)
+I (../Inc/main.h)(0x5AB961CE)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x5A679692)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x5A679692)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x5A679685)
@@ -786,10 +864,12 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_ltdc_ex.h)(0x5A679692)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h)(0x5A679692)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x5A679692)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h)(0x5A679692)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x5A679692)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x5A679692)
 F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_ltdc.c)(0x5A679693)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I..\Drivers\BSP\STM32F429I-Discovery -I..\Drivers\BSP\Components\ili9341 -I..\Drivers\BSP\Components\stmpe811-I C:\Users\15104095\Desktop\TFT\MDK-ARM\RTE-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.6.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-I C:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="516" -DSTM32F429xx -DUSE_HAL_DRIVER -DSTM32F429xx-o tft\stm32f4xx_hal_ltdc.o --omf_browse tft\stm32f4xx_hal_ltdc.crf --depend tft\stm32f4xx_hal_ltdc.d)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x5A679692)
-I (../Inc/stm32f4xx_hal_conf.h)(0x5AB2C3A0)
-I (../Inc/main.h)(0x5AB2C3A0)
+I (../Inc/stm32f4xx_hal_conf.h)(0x5AB961CD)
+I (../Inc/main.h)(0x5AB961CE)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x5A679692)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x5A679692)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x5A679685)
@@ -822,10 +902,12 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_ltdc_ex.h)(0x5A679692)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h)(0x5A679692)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x5A679692)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h)(0x5A679692)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x5A679692)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x5A679692)
 F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c.c)(0x5A679693)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I..\Drivers\BSP\STM32F429I-Discovery -I..\Drivers\BSP\Components\ili9341 -I..\Drivers\BSP\Components\stmpe811-I C:\Users\15104095\Desktop\TFT\MDK-ARM\RTE-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.6.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-I C:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="516" -DSTM32F429xx -DUSE_HAL_DRIVER -DSTM32F429xx-o tft\stm32f4xx_hal_i2c.o --omf_browse tft\stm32f4xx_hal_i2c.crf --depend tft\stm32f4xx_hal_i2c.d)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x5A679692)
-I (../Inc/stm32f4xx_hal_conf.h)(0x5AB2C3A0)
-I (../Inc/main.h)(0x5AB2C3A0)
+I (../Inc/stm32f4xx_hal_conf.h)(0x5AB961CD)
+I (../Inc/main.h)(0x5AB961CE)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x5A679692)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x5A679692)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x5A679685)
@@ -858,10 +940,12 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_ltdc_ex.h)(0x5A679692)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h)(0x5A679692)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x5A679692)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h)(0x5A679692)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x5A679692)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x5A679692)
 F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c)(0x5A679693)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I..\Drivers\BSP\STM32F429I-Discovery -I..\Drivers\BSP\Components\ili9341 -I..\Drivers\BSP\Components\stmpe811-I C:\Users\15104095\Desktop\TFT\MDK-ARM\RTE-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.6.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-I C:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="516" -DSTM32F429xx -DUSE_HAL_DRIVER -DSTM32F429xx-o tft\stm32f4xx_hal_flash.o --omf_browse tft\stm32f4xx_hal_flash.crf --depend tft\stm32f4xx_hal_flash.d)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x5A679692)
-I (../Inc/stm32f4xx_hal_conf.h)(0x5AB2C3A0)
-I (../Inc/main.h)(0x5AB2C3A0)
+I (../Inc/stm32f4xx_hal_conf.h)(0x5AB961CD)
+I (../Inc/main.h)(0x5AB961CE)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x5A679692)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x5A679692)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x5A679685)
@@ -894,10 +978,12 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_ltdc_ex.h)(0x5A679692)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h)(0x5A679692)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x5A679692)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h)(0x5A679692)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x5A679692)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x5A679692)
 F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma2d.c)(0x5A679692)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I..\Drivers\BSP\STM32F429I-Discovery -I..\Drivers\BSP\Components\ili9341 -I..\Drivers\BSP\Components\stmpe811-I C:\Users\15104095\Desktop\TFT\MDK-ARM\RTE-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.6.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-I C:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="516" -DSTM32F429xx -DUSE_HAL_DRIVER -DSTM32F429xx-o tft\stm32f4xx_hal_dma2d.o --omf_browse tft\stm32f4xx_hal_dma2d.crf --depend tft\stm32f4xx_hal_dma2d.d)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x5A679692)
-I (../Inc/stm32f4xx_hal_conf.h)(0x5AB2C3A0)
-I (../Inc/main.h)(0x5AB2C3A0)
+I (../Inc/stm32f4xx_hal_conf.h)(0x5AB961CD)
+I (../Inc/main.h)(0x5AB961CE)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x5A679692)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x5A679692)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x5A679685)
@@ -930,10 +1016,12 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_ltdc_ex.h)(0x5A679692)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h)(0x5A679692)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x5A679692)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h)(0x5A679692)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x5A679692)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x5A679692)
 F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_fmc.c)(0x5A679693)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I..\Drivers\BSP\STM32F429I-Discovery -I..\Drivers\BSP\Components\ili9341 -I..\Drivers\BSP\Components\stmpe811-I C:\Users\15104095\Desktop\TFT\MDK-ARM\RTE-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.6.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-I C:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="516" -DSTM32F429xx -DUSE_HAL_DRIVER -DSTM32F429xx-o tft\stm32f4xx_ll_fmc.o --omf_browse tft\stm32f4xx_ll_fmc.crf --depend tft\stm32f4xx_ll_fmc.d)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x5A679692)
-I (../Inc/stm32f4xx_hal_conf.h)(0x5AB2C3A0)
-I (../Inc/main.h)(0x5AB2C3A0)
+I (../Inc/stm32f4xx_hal_conf.h)(0x5AB961CD)
+I (../Inc/main.h)(0x5AB961CE)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x5A679692)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x5A679692)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x5A679685)
@@ -966,10 +1054,12 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_ltdc_ex.h)(0x5A679692)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h)(0x5A679692)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x5A679692)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h)(0x5A679692)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x5A679692)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x5A679692)
 F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c)(0x5A679693)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I..\Drivers\BSP\STM32F429I-Discovery -I..\Drivers\BSP\Components\ili9341 -I..\Drivers\BSP\Components\stmpe811-I C:\Users\15104095\Desktop\TFT\MDK-ARM\RTE-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.6.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-I C:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="516" -DSTM32F429xx -DUSE_HAL_DRIVER -DSTM32F429xx-o tft\stm32f4xx_hal_gpio.o --omf_browse tft\stm32f4xx_hal_gpio.crf --depend tft\stm32f4xx_hal_gpio.d)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x5A679692)
-I (../Inc/stm32f4xx_hal_conf.h)(0x5AB2C3A0)
-I (../Inc/main.h)(0x5AB2C3A0)
+I (../Inc/stm32f4xx_hal_conf.h)(0x5AB961CD)
+I (../Inc/main.h)(0x5AB961CE)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x5A679692)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x5A679692)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x5A679685)
@@ -1002,10 +1092,12 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_ltdc_ex.h)(0x5A679692)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h)(0x5A679692)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x5A679692)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h)(0x5A679692)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x5A679692)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x5A679692)
 F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c)(0x5A679692)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I..\Drivers\BSP\STM32F429I-Discovery -I..\Drivers\BSP\Components\ili9341 -I..\Drivers\BSP\Components\stmpe811-I C:\Users\15104095\Desktop\TFT\MDK-ARM\RTE-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.6.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-I C:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="516" -DSTM32F429xx -DUSE_HAL_DRIVER -DSTM32F429xx-o tft\stm32f4xx_hal_dma_ex.o --omf_browse tft\stm32f4xx_hal_dma_ex.crf --depend tft\stm32f4xx_hal_dma_ex.d)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x5A679692)
-I (../Inc/stm32f4xx_hal_conf.h)(0x5AB2C3A0)
-I (../Inc/main.h)(0x5AB2C3A0)
+I (../Inc/stm32f4xx_hal_conf.h)(0x5AB961CD)
+I (../Inc/main.h)(0x5AB961CE)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x5A679692)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x5A679692)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x5A679685)
@@ -1038,10 +1130,12 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_ltdc_ex.h)(0x5A679692)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h)(0x5A679692)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x5A679692)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h)(0x5A679692)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x5A679692)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x5A679692)
 F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c)(0x5A679693)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I..\Drivers\BSP\STM32F429I-Discovery -I..\Drivers\BSP\Components\ili9341 -I..\Drivers\BSP\Components\stmpe811-I C:\Users\15104095\Desktop\TFT\MDK-ARM\RTE-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.6.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-I C:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="516" -DSTM32F429xx -DUSE_HAL_DRIVER -DSTM32F429xx-o tft\stm32f4xx_hal_rcc_ex.o --omf_browse tft\stm32f4xx_hal_rcc_ex.crf --depend tft\stm32f4xx_hal_rcc_ex.d)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x5A679692)
-I (../Inc/stm32f4xx_hal_conf.h)(0x5AB2C3A0)
-I (../Inc/main.h)(0x5AB2C3A0)
+I (../Inc/stm32f4xx_hal_conf.h)(0x5AB961CD)
+I (../Inc/main.h)(0x5AB961CE)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x5A679692)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x5A679692)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x5A679685)
@@ -1074,10 +1168,12 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_ltdc_ex.h)(0x5A679692)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h)(0x5A679692)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x5A679692)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h)(0x5A679692)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x5A679692)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x5A679692)
 F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c)(0x5A679693)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I..\Drivers\BSP\STM32F429I-Discovery -I..\Drivers\BSP\Components\ili9341 -I..\Drivers\BSP\Components\stmpe811-I C:\Users\15104095\Desktop\TFT\MDK-ARM\RTE-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.6.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-I C:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="516" -DSTM32F429xx -DUSE_HAL_DRIVER -DSTM32F429xx-o tft\stm32f4xx_hal_tim.o --omf_browse tft\stm32f4xx_hal_tim.crf --depend tft\stm32f4xx_hal_tim.d)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x5A679692)
-I (../Inc/stm32f4xx_hal_conf.h)(0x5AB2C3A0)
-I (../Inc/main.h)(0x5AB2C3A0)
+I (../Inc/stm32f4xx_hal_conf.h)(0x5AB961CD)
+I (../Inc/main.h)(0x5AB961CE)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x5A679692)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x5A679692)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x5A679685)
@@ -1110,10 +1206,12 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_ltdc_ex.h)(0x5A679692)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h)(0x5A679692)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x5A679692)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h)(0x5A679692)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x5A679692)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x5A679692)
 F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c)(0x5A679692)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I..\Drivers\BSP\STM32F429I-Discovery -I..\Drivers\BSP\Components\ili9341 -I..\Drivers\BSP\Components\stmpe811-I C:\Users\15104095\Desktop\TFT\MDK-ARM\RTE-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.6.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-I C:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="516" -DSTM32F429xx -DUSE_HAL_DRIVER -DSTM32F429xx-o tft\stm32f4xx_hal.o --omf_browse tft\stm32f4xx_hal.crf --depend tft\stm32f4xx_hal.d)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x5A679692)
-I (../Inc/stm32f4xx_hal_conf.h)(0x5AB2C3A0)
-I (../Inc/main.h)(0x5AB2C3A0)
+I (../Inc/stm32f4xx_hal_conf.h)(0x5AB961CD)
+I (../Inc/main.h)(0x5AB961CE)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x5A679692)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x5A679692)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x5A679685)
@@ -1146,10 +1244,12 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_ltdc_ex.h)(0x5A679692)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h)(0x5A679692)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x5A679692)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h)(0x5A679692)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x5A679692)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x5A679692)
 F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c)(0x5A679693)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I..\Drivers\BSP\STM32F429I-Discovery -I..\Drivers\BSP\Components\ili9341 -I..\Drivers\BSP\Components\stmpe811-I C:\Users\15104095\Desktop\TFT\MDK-ARM\RTE-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.6.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-I C:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="516" -DSTM32F429xx -DUSE_HAL_DRIVER -DSTM32F429xx-o tft\stm32f4xx_hal_rcc.o --omf_browse tft\stm32f4xx_hal_rcc.crf --depend tft\stm32f4xx_hal_rcc.d)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x5A679692)
-I (../Inc/stm32f4xx_hal_conf.h)(0x5AB2C3A0)
-I (../Inc/main.h)(0x5AB2C3A0)
+I (../Inc/stm32f4xx_hal_conf.h)(0x5AB961CD)
+I (../Inc/main.h)(0x5AB961CE)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x5A679692)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x5A679692)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x5A679685)
@@ -1182,10 +1282,12 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_ltdc_ex.h)(0x5A679692)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h)(0x5A679692)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x5A679692)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h)(0x5A679692)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x5A679692)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x5A679692)
 F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c)(0x5A679693)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I..\Drivers\BSP\STM32F429I-Discovery -I..\Drivers\BSP\Components\ili9341 -I..\Drivers\BSP\Components\stmpe811-I C:\Users\15104095\Desktop\TFT\MDK-ARM\RTE-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.6.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-I C:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="516" -DSTM32F429xx -DUSE_HAL_DRIVER -DSTM32F429xx-o tft\stm32f4xx_hal_pwr_ex.o --omf_browse tft\stm32f4xx_hal_pwr_ex.crf --depend tft\stm32f4xx_hal_pwr_ex.d)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x5A679692)
-I (../Inc/stm32f4xx_hal_conf.h)(0x5AB2C3A0)
-I (../Inc/main.h)(0x5AB2C3A0)
+I (../Inc/stm32f4xx_hal_conf.h)(0x5AB961CD)
+I (../Inc/main.h)(0x5AB961CE)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x5A679692)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x5A679692)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x5A679685)
@@ -1218,10 +1320,12 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_ltdc_ex.h)(0x5A679692)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h)(0x5A679692)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x5A679692)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h)(0x5A679692)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x5A679692)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x5A679692)
 F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dsi.c)(0x5A679693)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I..\Drivers\BSP\STM32F429I-Discovery -I..\Drivers\BSP\Components\ili9341 -I..\Drivers\BSP\Components\stmpe811-I C:\Users\15104095\Desktop\TFT\MDK-ARM\RTE-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.6.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-I C:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="516" -DSTM32F429xx -DUSE_HAL_DRIVER -DSTM32F429xx-o tft\stm32f4xx_hal_dsi.o --omf_browse tft\stm32f4xx_hal_dsi.crf --depend tft\stm32f4xx_hal_dsi.d)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x5A679692)
-I (../Inc/stm32f4xx_hal_conf.h)(0x5AB2C3A0)
-I (../Inc/main.h)(0x5AB2C3A0)
+I (../Inc/stm32f4xx_hal_conf.h)(0x5AB961CD)
+I (../Inc/main.h)(0x5AB961CE)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x5A679692)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x5A679692)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x5A679685)
@@ -1254,10 +1358,12 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_ltdc_ex.h)(0x5A679692)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h)(0x5A679692)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x5A679692)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h)(0x5A679692)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x5A679692)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x5A679692)
 F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c)(0x5A679693)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I..\Drivers\BSP\STM32F429I-Discovery -I..\Drivers\BSP\Components\ili9341 -I..\Drivers\BSP\Components\stmpe811-I C:\Users\15104095\Desktop\TFT\MDK-ARM\RTE-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.6.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-I C:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="516" -DSTM32F429xx -DUSE_HAL_DRIVER -DSTM32F429xx-o tft\stm32f4xx_hal_tim_ex.o --omf_browse tft\stm32f4xx_hal_tim_ex.crf --depend tft\stm32f4xx_hal_tim_ex.d)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x5A679692)
-I (../Inc/stm32f4xx_hal_conf.h)(0x5AB2C3A0)
-I (../Inc/main.h)(0x5AB2C3A0)
+I (../Inc/stm32f4xx_hal_conf.h)(0x5AB961CD)
+I (../Inc/main.h)(0x5AB961CE)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x5A679692)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x5A679692)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x5A679685)
@@ -1290,10 +1396,12 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_ltdc_ex.h)(0x5A679692)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h)(0x5A679692)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x5A679692)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h)(0x5A679692)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x5A679692)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x5A679692)
 F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c)(0x5A679692)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I..\Drivers\BSP\STM32F429I-Discovery -I..\Drivers\BSP\Components\ili9341 -I..\Drivers\BSP\Components\stmpe811-I C:\Users\15104095\Desktop\TFT\MDK-ARM\RTE-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.6.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-I C:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="516" -DSTM32F429xx -DUSE_HAL_DRIVER -DSTM32F429xx-o tft\stm32f4xx_hal_dma.o --omf_browse tft\stm32f4xx_hal_dma.crf --depend tft\stm32f4xx_hal_dma.d)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x5A679692)
-I (../Inc/stm32f4xx_hal_conf.h)(0x5AB2C3A0)
-I (../Inc/main.h)(0x5AB2C3A0)
+I (../Inc/stm32f4xx_hal_conf.h)(0x5AB961CD)
+I (../Inc/main.h)(0x5AB961CE)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x5A679692)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x5A679692)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x5A679685)
@@ -1326,10 +1434,12 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_ltdc_ex.h)(0x5A679692)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h)(0x5A679692)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x5A679692)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h)(0x5A679692)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x5A679692)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x5A679692)
 F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c)(0x5A679692)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I..\Drivers\BSP\STM32F429I-Discovery -I..\Drivers\BSP\Components\ili9341 -I..\Drivers\BSP\Components\stmpe811-I C:\Users\15104095\Desktop\TFT\MDK-ARM\RTE-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.6.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-I C:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="516" -DSTM32F429xx -DUSE_HAL_DRIVER -DSTM32F429xx-o tft\stm32f4xx_hal_cortex.o --omf_browse tft\stm32f4xx_hal_cortex.crf --depend tft\stm32f4xx_hal_cortex.d)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x5A679692)
-I (../Inc/stm32f4xx_hal_conf.h)(0x5AB2C3A0)
-I (../Inc/main.h)(0x5AB2C3A0)
+I (../Inc/stm32f4xx_hal_conf.h)(0x5AB961CD)
+I (../Inc/main.h)(0x5AB961CE)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x5A679692)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x5A679692)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x5A679685)
@@ -1362,10 +1472,12 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_ltdc_ex.h)(0x5A679692)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h)(0x5A679692)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x5A679692)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h)(0x5A679692)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x5A679692)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x5A679692)
 F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c)(0x5A679693)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I..\Drivers\BSP\STM32F429I-Discovery -I..\Drivers\BSP\Components\ili9341 -I..\Drivers\BSP\Components\stmpe811-I C:\Users\15104095\Desktop\TFT\MDK-ARM\RTE-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.6.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-I C:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="516" -DSTM32F429xx -DUSE_HAL_DRIVER -DSTM32F429xx-o tft\stm32f4xx_hal_spi.o --omf_browse tft\stm32f4xx_hal_spi.crf --depend tft\stm32f4xx_hal_spi.d)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x5A679692)
-I (../Inc/stm32f4xx_hal_conf.h)(0x5AB2C3A0)
-I (../Inc/main.h)(0x5AB2C3A0)
+I (../Inc/stm32f4xx_hal_conf.h)(0x5AB961CD)
+I (../Inc/main.h)(0x5AB961CE)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x5A679692)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x5A679692)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x5A679685)
@@ -1398,10 +1510,12 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_ltdc_ex.h)(0x5A679692)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h)(0x5A679692)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x5A679692)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h)(0x5A679692)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x5A679692)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x5A679692)
 F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c)(0x5A679693)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I..\Drivers\BSP\STM32F429I-Discovery -I..\Drivers\BSP\Components\ili9341 -I..\Drivers\BSP\Components\stmpe811-I C:\Users\15104095\Desktop\TFT\MDK-ARM\RTE-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.6.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-I C:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="516" -DSTM32F429xx -DUSE_HAL_DRIVER -DSTM32F429xx-o tft\stm32f4xx_hal_flash_ramfunc.o --omf_browse tft\stm32f4xx_hal_flash_ramfunc.crf --depend tft\stm32f4xx_hal_flash_ramfunc.d)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x5A679692)
-I (../Inc/stm32f4xx_hal_conf.h)(0x5AB2C3A0)
-I (../Inc/main.h)(0x5AB2C3A0)
+I (../Inc/stm32f4xx_hal_conf.h)(0x5AB961CD)
+I (../Inc/main.h)(0x5AB961CE)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x5A679692)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x5A679692)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x5A679685)
@@ -1434,3 +1548,5 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_ltdc_ex.h)(0x5A679692)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h)(0x5A679692)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x5A679692)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h)(0x5A679692)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x5A679692)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x5A679692)

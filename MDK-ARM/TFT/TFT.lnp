@@ -17,6 +17,7 @@
 "tft\dma2d.o"
 "tft\gpio.o"
 "tft\i2c.o"
+"tft\tim.o"
 "tft\stm32f4xx_hal_sdram.o"
 "tft\stm32f4xx_hal_flash_ex.o"
 "tft\stm32f4xx_hal_ltdc_ex.o"

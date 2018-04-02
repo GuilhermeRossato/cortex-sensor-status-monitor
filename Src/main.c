@@ -42,6 +42,7 @@
 #include "i2c.h"
 #include "ltdc.h"
 #include "spi.h"
+#include "tim.h"
 #include "gpio.h"
 #include "fmc.h"
 
@@ -133,6 +134,7 @@ TS_StateTypeDef TsState;
   MX_I2C3_Init();
   MX_SPI5_Init();
   MX_FMC_Init();
+  MX_TIM2_Init();
   /* USER CODE BEGIN 2 */
 	BSP_LCD_Init();
 	BSP_LCD_LayerDefaultInit(LCD_BACKGROUND_LAYER,LCD_FRAME_BUFFER);
@@ -158,7 +160,6 @@ TS_StateTypeDef TsState;
 			last_display_update += 50;
 			// Fix very slow cycles ahead
 			if (nowMS-last_display_update > 50) {
-				displayState();
 				displayState();
 				last_display_update = nowMS;
 			}
