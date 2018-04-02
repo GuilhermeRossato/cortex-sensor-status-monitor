@@ -29,11 +29,11 @@ This projects implements the following functionalities:
 
 ## Modified I2C
 
-Due to how the SHT15 Humidity and Temperature Sensor works, a manual I2C communication had to be built based on the timing diagramns specified in the [sht datasheet](http://www.farnell.com/datasheets/317085.pdf):
+Due to how the SHT15 Humidity and Temperature Sensor works, a manual (bit-banged) I2C communication had to be built based on the timing diagramns specified in the [sht datasheet](http://www.farnell.com/datasheets/317085.pdf):
 
 ![Timing Diagram](https://i.imgur.com/zK0e3VD.png)
 
-The connection was done in the following :
+The SHT IC connection was done like the following diagram:
 
 ![SHT15 Pin Connection Schematic](https://hobbybotics.files.wordpress.com/2012/05/hobbybotics-sht1x-breakout-v1-0-schematic.png)
 
@@ -47,4 +47,4 @@ The STM32F429 Discovery board offers the following features:
 
 ## Credits
 
-I developed this project as a learning experiment for my Computer Engineering course with the help of my Prof. Dr. Juliano D'Ornelas Benfica in April, 2018
+I (Guilherme Rossato) developed this project as a learning experiment for my Computer Engineering course with the help of my Prof. Dr. Juliano D'Ornelas Benfica in April, 2018
