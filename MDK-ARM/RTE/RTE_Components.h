@@ -3,8 +3,8 @@
  * Auto generated Run-Time-Environment Component Configuration File
  *      *** Do not modify ! ***
  *
- * Project: 'startup' 
- * Target:  'startup' 
+ * Project: 'TFT' 
+ * Target:  'TFT' 
  */
 
 #ifndef RTE_COMPONENTS_H
