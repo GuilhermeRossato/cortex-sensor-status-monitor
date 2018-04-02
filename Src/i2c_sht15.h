@@ -105,15 +105,16 @@ unsigned char le_byte_i2c() {
 	set_SDA_as_output();
 	DELAY;
 	P(G, SDA, 0); // ack
+	P(G, SCL, 1);
+	DELAY;
+	P(G, SCL, 0);
 	DELAY;
 	return accum;
 }
 
 void envia_byte_i2c(int dado) {
-	int arr[] = {0, 0, 0, 0, 0, 1, 0, 1};
 	for (int i=0;i<8;i++) {
-		//envia_bit_i2c((dado << (7-i)) % 2);
-		envia_bit_i2c(arr[i]);
+		envia_bit_i2c((dado >> (7-i)) % 2);
 	}
 }
 
