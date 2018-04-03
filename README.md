@@ -25,7 +25,7 @@ This projects implements the following functionalities:
  - All code is written in pure C.
  - The screens are divided in views.
  - Each view is a specific state in a state machine.
- - Alarms are globally-set threshold pairs that can be set in a specific view
+ - Alarms are globally-set threshold pairs that can be set in a specific view.
 
 ## Modified I2C
 
