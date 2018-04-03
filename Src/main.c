@@ -145,6 +145,7 @@ TS_StateTypeDef TsState;
   BSP_TS_Init(240, 320);
   unsigned long last_display_update = HAL_GetTick();
   init_sliders();
+	init_state_machine();
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -167,7 +168,6 @@ TS_StateTypeDef TsState;
             }
             displayState();
         }
-        checkAlarmState();
 
         BSP_TS_GetState(&TsState);
         if(TsState.TouchDetected)
