@@ -18,6 +18,7 @@
 "tft\gpio.o"
 "tft\i2c.o"
 "tft\tim.o"
+"tft\adc.o"
 "tft\stm32f4xx_hal_sdram.o"
 "tft\stm32f4xx_hal_flash_ex.o"
 "tft\stm32f4xx_hal_ltdc_ex.o"
@@ -41,6 +42,8 @@
 "tft\stm32f4xx_hal_cortex.o"
 "tft\stm32f4xx_hal_spi.o"
 "tft\stm32f4xx_hal_flash_ramfunc.o"
+"tft\stm32f4xx_hal_adc_ex.o"
+"tft\stm32f4xx_hal_adc.o"
 --library_type=microlib --strict --scatter "TFT\TFT.sct"
 --summary_stderr --info summarysizes --map --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers

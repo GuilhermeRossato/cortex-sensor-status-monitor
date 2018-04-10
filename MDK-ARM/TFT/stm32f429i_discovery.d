@@ -23,6 +23,8 @@ tft\stm32f429i_discovery.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gp
 tft\stm32f429i_discovery.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h
 tft\stm32f429i_discovery.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma_ex.h
 tft\stm32f429i_discovery.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h
+tft\stm32f429i_discovery.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc.h
+tft\stm32f429i_discovery.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc_ex.h
 tft\stm32f429i_discovery.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma2d.h
 tft\stm32f429i_discovery.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h
 tft\stm32f429i_discovery.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h
