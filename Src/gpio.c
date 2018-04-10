@@ -56,6 +56,7 @@
         * Output
         * EVENT_OUT
         * EXTI
+     PA5   ------> ADCx_IN5
 */
 void MX_GPIO_Init(void)
 {

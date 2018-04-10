@@ -5,7 +5,7 @@
   ******************************************************************************
   ** This notice applies to any and all portions of this file
   * that are not between comment pairs USER CODE BEGIN and
-  * USER CODE END. Other portions of this file, whether
+  * USER CODE END. Other portions of this file, whether 
   * inserted by the user or by software development tools
   * are owned by their respective copyright owners.
   *
@@ -38,6 +38,7 @@
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
 #include "stm32f4xx_hal.h"
+#include "adc.h"
 #include "dma2d.h"
 #include "i2c.h"
 #include "ltdc.h"
@@ -63,7 +64,7 @@
 */
     #define P(l,i,v)    GPIO##l->BSRR = 1<<(i+((!v)*16))
 /*
- * Reads a pin from a port
+ * Reads a pin from a port, returns 0 or 1
 */
     #define R(l,i)      ((GPIO##l->IDR & (1<<i))>0)
 #endif
@@ -94,11 +95,44 @@ void SystemClock_Config(void);
 /* USER CODE END PFP */
 
 /* USER CODE BEGIN 0 */
+void updatePwmValue() {
+	static int manual_pwm = 0;
+	static int pwm_state = 0;
+	int should_be_1 = (manual_pwm > pot_value/40.0f);
 
+	if (manual_pwm < 100) {
+		if (pwm_state == 0 && should_be_1) {
+			P(C, 8, 1);
+			pwm_state = 1;
+		} else if (pwm_state == 1 && !should_be_1) {
+			P(C, 8, 0);
+			pwm_state = 0;
+		}
+		manual_pwm++;
+	} else {
+		manual_pwm = 0;
+	}
+}
 
+int last_pwm_count; // declared to use in state_machine
 
-// #####################################
-
+void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
+{
+	if(htim == &htim2) {
+	static int sum = 0;
+	static int interval = 0;
+	if (R(C, 8)) {
+		sum++;
+	}
+	interval++;
+	if (interval > 100) {
+		interval = 0;
+		last_pwm_count = sum;
+		sum = 0;
+	}
+	updatePwmValue();
+	}
+}
 /* USER CODE END 0 */
 
 /**
@@ -110,6 +144,7 @@ int main(void)
 {
   /* USER CODE BEGIN 1 */
 TS_StateTypeDef TsState;
+ADC_ChannelConfTypeDef sConfig;
   /* USER CODE END 1 */
 
   /* MCU Configuration----------------------------------------------------------*/
@@ -136,7 +171,9 @@ TS_StateTypeDef TsState;
   MX_SPI5_Init();
   MX_FMC_Init();
   MX_TIM2_Init();
+  MX_ADC1_Init();
   /* USER CODE BEGIN 2 */
+	
   BSP_LCD_Init();
   BSP_LCD_LayerDefaultInit(LCD_BACKGROUND_LAYER,LCD_FRAME_BUFFER);
   BSP_LCD_LayerDefaultInit(LCD_FOREGROUND_LAYER,LCD_FRAME_BUFFER);
@@ -146,6 +183,17 @@ TS_StateTypeDef TsState;
   unsigned long last_display_update = HAL_GetTick();
   init_sliders();
 	init_state_machine();
+	int adc_control = 0;
+	HAL_TIM_Base_Start_IT(&htim2);
+	
+	GPIO_InitTypeDef GPIO_InitStruct;
+	GPIO_InitStruct.Pin = GPIO_PIN_8; // SDA => PG.2
+	GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP; //FAZ SDA COMO SAIDA
+	GPIO_InitStruct.Pull = GPIO_PULLUP;
+	GPIO_InitStruct.Speed = GPIO_SPEED_HIGH;
+	HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
+	
+	P(C, 8, 0);
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -156,6 +204,32 @@ TS_StateTypeDef TsState;
   /* USER CODE END WHILE */
 
   /* USER CODE BEGIN 3 */
+		/* start ADC CONTROL */
+		if (adc_control == 0) {
+			sConfig.Channel = ADC_CHANNEL_5;
+			HAL_ADC_ConfigChannel(&hadc1, &sConfig);
+			HAL_ADC_Start(&hadc1);
+			adc_control = 1;
+		} else if (adc_control == 1) {
+			adc_control = 2;
+		} else if (adc_control == 2) {
+			if (HAL_ADC_PollForConversion(&hadc1,ADC_CHANNEL_5)==0) {
+				adc_control = 3;
+			}
+		} else if (adc_control == 3) {
+			adc_control = 4;
+		} else if (adc_control == 4) {
+			pot_value = HAL_ADC_GetValue(&hadc1);
+			//speed.raw = pot_value; // set in state machine.h
+			//speed.value = pot_value/40.48f;
+			adc_control = 5;
+		} else if (adc_control >= 5 && adc_control <= 10) {
+			adc_control++;
+		} else {
+			adc_control = 0;
+		}
+		/* end ADC CONTROL */
+		
         updateReadings();
         // Handle periodic drawing
         int nowMS = HAL_GetTick();
@@ -201,13 +275,13 @@ void SystemClock_Config(void)
   RCC_ClkInitTypeDef RCC_ClkInitStruct;
   RCC_PeriphCLKInitTypeDef PeriphClkInitStruct;
 
-    /**Configure the main internal regulator output voltage
+    /**Configure the main internal regulator output voltage 
     */
   __HAL_RCC_PWR_CLK_ENABLE();
 
   __HAL_PWR_VOLTAGESCALING_CONFIG(PWR_REGULATOR_VOLTAGE_SCALE1);
 
-    /**Initializes the CPU, AHB and APB busses clocks
+    /**Initializes the CPU, AHB and APB busses clocks 
     */
   RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSE;
   RCC_OscInitStruct.HSEState = RCC_HSE_ON;
@@ -222,14 +296,14 @@ void SystemClock_Config(void)
     _Error_Handler(__FILE__, __LINE__);
   }
 
-    /**Initializes the CPU, AHB and APB busses clocks
+    /**Initializes the CPU, AHB and APB busses clocks 
     */
   RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_HCLK|RCC_CLOCKTYPE_SYSCLK
                               |RCC_CLOCKTYPE_PCLK1|RCC_CLOCKTYPE_PCLK2;
   RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_PLLCLK;
   RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
   RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV4;
-  RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV2;
+  RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV4;
 
   if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_5) != HAL_OK)
   {
@@ -245,11 +319,11 @@ void SystemClock_Config(void)
     _Error_Handler(__FILE__, __LINE__);
   }
 
-    /**Configure the Systick interrupt time
+    /**Configure the Systick interrupt time 
     */
   HAL_SYSTICK_Config(HAL_RCC_GetHCLKFreq()/1000);
 
-    /**Configure the Systick
+    /**Configure the Systick 
     */
   HAL_SYSTICK_CLKSourceConfig(SYSTICK_CLKSOURCE_HCLK);
 
@@ -286,7 +360,7 @@ void _Error_Handler(char *file, int line)
   * @retval None
   */
 void assert_failed(uint8_t* file, uint32_t line)
-{
+{ 
   /* USER CODE BEGIN 6 */
   /* User can add his own implementation to report the file name and line number,
      tex: printf("Wrong parameters value: file %s on line %d\r\n", file, line) */
