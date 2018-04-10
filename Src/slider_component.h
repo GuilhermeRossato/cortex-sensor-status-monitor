@@ -20,6 +20,8 @@ int absolute_value(int i) {
 	return (i < 0)?-i:i;
 }
 
+void on_slider_value_change(int, int, int);
+
 slider_component sliders[SLIDER_COUNT];
 
 int get_slider_on_mouse(int x, int y) {
@@ -61,8 +63,8 @@ void draw_slider(int id) {
 		
 	} else if (sliders[id].type == DOUBLE_SLIDER) {
 		/* Clearing */
-		BSP_LCD_SetTextColor(LCD_COLOR_YELLOW);
-		BSP_LCD_FillRect(pos_x, pos_y, 220, 40);
+		BSP_LCD_SetTextColor(LCD_COLOR_WHITE);
+		BSP_LCD_FillRect(pos_x-10, pos_y, 220+20, 40);
 		/* Drawing background lines */
 		BSP_LCD_SetTextColor(0xFF686868);
 		BSP_LCD_DrawHLine(pos_x, pos_y+18, 220);
@@ -76,26 +78,26 @@ void draw_slider(int id) {
 		BSP_LCD_DrawHLine(pos_x, pos_y+22, 220);
 		if (v1 - v0 > 11) {
 			/* Drawing active section */
-			int lx = v1-5-(pos_x+v0);
+			int lx = v1+4-(pos_x+v0);
 			BSP_LCD_SetTextColor(0xFF0D6087);
 			BSP_LCD_DrawHLine(pos_x+v0+5, pos_y+18, lx);
 			BSP_LCD_SetTextColor(0xFF0D91CC);
-			BSP_LCD_DrawHLine(pos_x+v0+5, pos_y+18, lx);
+			BSP_LCD_DrawHLine(pos_x+v0+5, pos_y+19, lx);
 			BSP_LCD_SetTextColor(0xFF0EA4E8);
-			BSP_LCD_DrawHLine(pos_x+v0+5, pos_y+18, lx);
+			BSP_LCD_DrawHLine(pos_x+v0+5, pos_y+20, lx);
 			BSP_LCD_SetTextColor(0xFF0EA7EC);
-			BSP_LCD_DrawHLine(pos_x+v0+5, pos_y+18, lx);
+			BSP_LCD_DrawHLine(pos_x+v0+5, pos_y+21, lx);
 			BSP_LCD_SetTextColor(0xFF0F99D8);
-			BSP_LCD_DrawHLine(pos_x+v0+5, pos_y+18, lx);
+			BSP_LCD_DrawHLine(pos_x+v0+5, pos_y+22, lx);
 		}
 		/* Drawing images */
 		BSP_LCD_SetTextColor(LCD_COLOR_BLACK);
 		
-		BSP_LCD_DrawBitmap(pos_x+v0, pos_y+15, (uint8_t*)control_middle);
-		BSP_LCD_DrawBitmap(pos_x+v1, pos_y+15, (uint8_t*)control_middle);
-		
 		BSP_LCD_DrawBitmap(pos_x, pos_y+18, (uint8_t*)left_background);
 		BSP_LCD_DrawBitmap(pos_x+220-4, pos_y+18, (uint8_t*)right_background);
+		
+		BSP_LCD_DrawBitmap(pos_x+v0, pos_y+15, (uint8_t*)control_middle);
+		BSP_LCD_DrawBitmap(pos_x+v1, pos_y+15, (uint8_t*)control_middle);
 	}
 }
 
